@@ -1,1 +1,3 @@
+The purpose of these classes is to allow the reading of a request's body, upstream of a controller that will also read the request's body.  Without this, Spring will throw nasty exceptions about the stream already having been read. 
+
 The easiest thing to do here is to simply life the Servlet Filter and the Servlet Stream implementation.  If you'd like to play around with the Filter and controller, it's a Spring Boot app. You can simply run the integration test to see how it works.  If you'd like to mess around with a REST client, the server can be started via the TestApp class, or started via Gradle with the "bootRun" task. 
